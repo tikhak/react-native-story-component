@@ -264,6 +264,9 @@ const Story = (props: StoryProps) => {
     );
   };
 
+  const { height: SCREEN_HEIGHT, width: SCREEN_WIDTH } = Dimensions.get('window');
+  const STATUSBAR_HEIGHT = StatusBar.currentHeight;
+
   return (
     <>
       <View style={storyListStyle}>{renderStoryCircleList()}</View>
@@ -271,7 +274,7 @@ const Story = (props: StoryProps) => {
         style={{
           flex: 1,
           height: Platform.OS === 'android' ? '110%' : '100%',
-          marginTop: Platform.OS === 'android' ? -StatusBar.currentHeight : 0, 
+          marginTop: Platform.OS === 'android' ? -STATUSBAR_HEIGHT : 0, 
         }}
         isOpen={isModalOpen}
         onClosed={() => setIsModalOpen(false)}
