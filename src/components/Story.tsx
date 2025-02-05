@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import {
-  Dimensions,
   View,
   Platform,
   StatusBar,
