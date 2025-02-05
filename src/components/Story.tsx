@@ -270,7 +270,6 @@ const Story = (props: StoryProps) => {
       <Modal
         style={styles.modal}
         isOpen={isModalOpen}
-        entry={"top"}
         onClosed={() => setIsModalOpen(false)}
         position="center"
         swipeToClose
@@ -278,7 +277,6 @@ const Story = (props: StoryProps) => {
         backButtonClose
         coverScreen
       >
-        <StatusBar barStyle="light-content" />
         {renderCube()}
       </Modal>
     </>
@@ -294,8 +292,8 @@ Story.defaultProps = {
 const styles = StyleSheet.create({
   modal: {
     flex: 1,
-    height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width,
+    height: Dimensions.get('screen').height,
+    width: Dimensions.get('screen').width,
   },
 });
 
