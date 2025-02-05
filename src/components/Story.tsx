@@ -268,7 +268,11 @@ const Story = (props: StoryProps) => {
     <>
       <View style={storyListStyle}>{renderStoryCircleList()}</View>
       <Modal
-        style={styles.modal}
+        style={{
+          flex: 1,
+          height: Platform.OS === 'android' ? '110%' : '100%',
+          marginTop: Platform.OS === 'android' ? -StatusBar.currentHeight : 0, 
+        }}
         isOpen={isModalOpen}
         onClosed={() => setIsModalOpen(false)}
         position="center"
