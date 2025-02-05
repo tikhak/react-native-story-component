@@ -276,6 +276,7 @@ const Story = (props: StoryProps) => {
         swipeArea={250}
         backButtonClose
         coverScreen
+        statusBarTranslucent
       >
         <StatusBar barStyle="light-content" />
         {renderCube()}
