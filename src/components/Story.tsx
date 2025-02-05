@@ -3,7 +3,6 @@ import {
   Dimensions,
   View,
   Platform,
-  StatusBar,
   StyleSheet,
   Image,
 } from 'react-native';
