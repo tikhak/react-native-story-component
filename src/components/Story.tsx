@@ -265,7 +265,7 @@ const Story = (props: StoryProps) => {
   };
 
   const { height: SCREEN_HEIGHT, width: SCREEN_WIDTH } = Dimensions.get('window');
-  const STATUSBAR_HEIGHT = StatusBar.currentHeight;
+  const STATUSBAR_HEIGHT = StatusBar.currentHeight || 20 ;
 
   return (
     <>
