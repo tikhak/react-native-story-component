@@ -5,8 +5,8 @@ import {
   StatusBar,
   StyleSheet,
   Image,
+  Modal,
 } from 'react-native';
-import Modal from 'react-native-modalbox';
 
 import StoryListItem from './StoryListItem';
 import StoryCircleListView from './StoryCircleListView';
@@ -273,13 +273,11 @@ const Story = (props: StoryProps) => {
           height: Platform.OS === 'android' ? '110%' : '100%',
           marginTop: Platform.OS === 'android' ? -STATUSBAR_HEIGHT : 0, 
         }]}
-        isOpen={isModalOpen}
-        onClosed={() => setIsModalOpen(false)}
-        position="center"
-        swipeToClose
-        swipeArea={250}
-        backButtonClose
-        coverScreen={true}
+        visible={isModalOpen}
+        animationType="slide"
+        onRequestClose={() => setIsModalOpen(false)}
+        transparent={true} 
+        statusBarTranslucent
       >
         <StatusBar backgroundColor="transparent" barStyle="light-content" translucent={true}/>
         {renderCube()}
