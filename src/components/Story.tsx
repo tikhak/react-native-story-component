@@ -3,6 +3,7 @@ import {
   Dimensions,
   View,
   Platform,
+  StatusBar,
   StyleSheet,
   Image,
 } from 'react-native';
@@ -274,8 +275,9 @@ const Story = (props: StoryProps) => {
         swipeToClose
         swipeArea={250}
         backButtonClose
-        coverScreen
+        coverScreen={true}
       >
+        <StatusBar backgroundColor="transparent" barStyle="light-content" />
         {renderCube()}
       </Modal>
     </>
