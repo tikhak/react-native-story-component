@@ -297,8 +297,6 @@ Story.defaultProps = {
 const styles = StyleSheet.create({
   modal: {
     flex: 1,
-    height: Platform.OS === 'android' ? '110%' : '100%',
-    marginTop: Platform.OS === 'android' ? -StatusBar.currentHeight : 0, 
   },
 });
 
