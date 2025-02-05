@@ -270,13 +270,13 @@ const Story = (props: StoryProps) => {
       <Modal
         style={styles.modal}
         isOpen={isModalOpen}
+        entry={"top"}
         onClosed={() => setIsModalOpen(false)}
         position="center"
         swipeToClose
         swipeArea={250}
         backButtonClose
         coverScreen
-        statusBarTranslucent
       >
         <StatusBar barStyle="light-content" />
         {renderCube()}
