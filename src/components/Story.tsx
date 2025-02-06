@@ -4,6 +4,7 @@ import {
   Platform,
   StatusBar,
   StyleSheet,
+  Dimensions,
   Image,
   Modal,
 } from 'react-native';
@@ -263,16 +264,11 @@ const Story = (props: StoryProps) => {
     );
   };
 
-  const STATUSBAR_HEIGHT = StatusBar.currentHeight || 20 ;
-
   return (
     <>
       <View style={storyListStyle}>{renderStoryCircleList()}</View>
       <Modal
-        style={[styles.modal, {
-          height: Platform.OS === 'android' ? '110%' : '100%',
-          marginTop: Platform.OS === 'android' ? -STATUSBAR_HEIGHT : 0, 
-        }]}
+        style={styles.modal}
         visible={isModalOpen}
         animationType="slide"
         onRequestClose={() => setIsModalOpen(false)}
@@ -295,6 +291,8 @@ Story.defaultProps = {
 const styles = StyleSheet.create({
   modal: {
     flex: 1,
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width,
   },
 });
 
