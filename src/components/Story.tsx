@@ -272,8 +272,6 @@ const Story = (props: StoryProps) => {
         visible={isModalOpen}
         animationType="slide"
         onRequestClose={() => setIsModalOpen(false)}
-        transparent={true} 
-        statusBarTranslucent
       >
         <StatusBar backgroundColor="transparent" barStyle="light-content" translucent={true}/>
         {renderCube()}
@@ -292,7 +290,6 @@ const styles = StyleSheet.create({
   modal: {
     height: Dimensions.get('screen').height,
     width: Dimensions.get('screen').width,
-    top: Platform.OS === 'android' ? -50 : 0, 
   },
 });
 
