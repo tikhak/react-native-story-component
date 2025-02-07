@@ -8,7 +8,7 @@ import {
   Platform,
 } from 'react-native';
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('screen');
 
 const PESPECTIVE = Platform.OS === 'ios' ? 2.38 : 2.2;
 const TR_POSITION = Platform.OS === 'ios' ? 2 : 1.4;
