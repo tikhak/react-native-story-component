@@ -275,7 +275,6 @@ const Story = (props: StoryProps) => {
         transparent={true} 
         statusBarTranslucent
       >
-        <StatusBar backgroundColor="transparent" barStyle="light-content" translucent={true}/>
         {renderCube()}
       </Modal>
     </>
