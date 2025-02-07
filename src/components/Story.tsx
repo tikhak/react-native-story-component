@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect, useCallback } from 'react';
 import {
   View,
   Platform,
-  StatusBar,
   StyleSheet,
   Dimensions,
   Image,
