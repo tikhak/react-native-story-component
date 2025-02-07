@@ -290,10 +290,9 @@ Story.defaultProps = {
 
 const styles = StyleSheet.create({
   modal: {
-    flex: 1,
     height: Dimensions.get('screen').height,
     width: Dimensions.get('screen').width,
-    marginTop: Platform.OS === 'android' ? 20 : 0, 
+    marginTop: Platform.OS === 'android' ? 50 : 0, 
   },
 });
 
