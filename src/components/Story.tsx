@@ -290,7 +290,7 @@ Story.defaultProps = {
 
 const styles = StyleSheet.create({
   modal: {
-    height: Dimensions.get('screen').height,
+    height: Platform.OS === 'android' ? '110%' : '100%',
     width: Dimensions.get('screen').width,
   },
 });
