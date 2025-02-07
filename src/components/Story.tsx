@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
   modal: {
     height: Dimensions.get('screen').height,
     width: Dimensions.get('screen').width,
-    marginTop: Platform.OS === 'android' ? 50 : 0, 
+    top: Platform.OS === 'android' ? 50 : 0, 
   },
 });
 
