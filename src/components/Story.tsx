@@ -272,6 +272,8 @@ const Story = (props: StoryProps) => {
         visible={isModalOpen}
         animationType="slide"
         onRequestClose={() => setIsModalOpen(false)}
+        transparent={true} 
+        statusBarTranslucent
       >
         <StatusBar backgroundColor="transparent" barStyle="light-content" translucent={true}/>
         {renderCube()}
